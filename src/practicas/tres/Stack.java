@@ -47,6 +47,25 @@ public class Stack {
 		
 	}
 	
+	public Iterator getIter(){
+        return new Iterator(){
+            private int p;
+            {
+                p = 0;
+            }
+            @Override
+            public boolean hasNext() {
+
+                return p < items.size();
+            }
+
+            @Override
+            public Object next() {
+                return items.get(p++);
+            }
+        };
+    }
+	
 	public static void main(String[] args) {
 		Stack pila = new Stack();
 		pila.push("1");
@@ -62,6 +81,12 @@ public class Stack {
 		iterator = pila.getIterator();
 		while(iterator.hasNext()){
 			System.out.println(iterator.next());
+		}
+		
+		System.out.println("Probando iterador anonimo");
+		Iterator tt = pila.getIter();
+		while(tt.hasNext()){
+			System.out.println(tt.next());
 		}
 	}
 }
