@@ -41,7 +41,7 @@ public class ListaColores extends JFrame {
         
         createMenuBar();
         setList();
-        setField();
+        this.add(text);
         setButtons();
         basicInit(); 
     }
@@ -73,12 +73,6 @@ public class ListaColores extends JFrame {
     	this.add(listScrollPane);
     }
     
-    
-    private void setField(){	
-    	
-    	this.add(text);
-    
-    }
     
     private void setButtons(){
     	
