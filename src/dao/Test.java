@@ -7,7 +7,7 @@ public class Test {
 	public static void main(String[] args) {
 		
 		Menu m = new Menu();
-		m.setNombre("tarda");
+		m.setNombre("tarta");
 		m.setDescripcion("j y q");
 		m.setPrecio((float) 150.0);
 		
@@ -15,7 +15,7 @@ public class Test {
 		
 		dao.guardar(m);
 		
-		Menu resultado = dao.buscarPorNombre("tarda");
+		Menu resultado = dao.buscarPorNombre("tarta");
 		
 		System.out.println(resultado.getNombre());
 		
